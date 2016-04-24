@@ -134,6 +134,11 @@ function mouseHighlightTimeline(d){
 
 function noMouseHighlightTimeline(d){
     if (singleUser){
+
+        div1.transition()		
+            .duration(500)		
+            .style("opacity", 0);
+
         div2.transition()		
             .duration(500)		
             .style("opacity", 0);	
