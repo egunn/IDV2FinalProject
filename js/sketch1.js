@@ -112,7 +112,7 @@ function parse(data){
 
 //load sketch page
 function multUsers(userInput){
-    window.location = "../sketch1b.html";
+    window.location = "./sketch1b.html";
 }
 
 
