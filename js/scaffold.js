@@ -72,12 +72,19 @@ function drawUserCanvas(twitterData,currentCanvas){
             .attr('height',photoWidth)
             .style('fill','lightgray');
 
+        var fromTwitter = twitterData[0].user.profile_image_url;
+        var noExtens = fromTwitter.substr(0, fromTwitter.lastIndexOf('.'));
+        var extens = fromTwitter.substr(fromTwitter.lastIndexOf('.'),fromTwitter.length);
+        var link = noExtens.substring(0, (noExtens.length-7));
+
+        var toRequest = link + extens;
+        
         userData.append("svg:image")
            .attr('x',5)//userWidth/2-photoWidth/2+5)
            .attr('y',15)
            .attr('width', 90)
            .attr('height', 90)
-           .attr("xlink:href",twitterData[0].user.profile_image_url);
+           .attr("xlink:href",toRequest);
 
         userData.append('text')
             .style('text-anchor','middle')
