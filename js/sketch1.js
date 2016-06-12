@@ -118,6 +118,7 @@ function multUsers(userInput){
 
 //Change gravity functions and animate legend items when Separate Categories button is pushed
 function mouseClickCategories(twitterData) {
+    force.start();
     if (multiGravityOn == true){
         multiGravityOn = false;
         
